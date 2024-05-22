@@ -1,0 +1,20 @@
+/* Popup.css */
+.bgg-1 {
+    position: fixed;
+    top: 5%;
+    left: 40%;
+    z-index: 1000;
+    width: 400px;
+    height: 200px;
+    background: grey;
+    color: white;
+  }
+
+  .bgg-2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: black;
+    border: none;
+    padding: 5px;
+  }
