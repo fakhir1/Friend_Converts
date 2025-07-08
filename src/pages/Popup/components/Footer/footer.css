@@ -1,0 +1,41 @@
+.footer {
+  text-align: center;
+  margin-top: auto; /* Pushes footer to the bottom */
+  padding: 16px;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #555;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-links span {
+  color: #ccc;
+}
+
+.footer-disclaimer {
+  font-size: 10px;
+  color: #888;
+  margin: 0;
+}

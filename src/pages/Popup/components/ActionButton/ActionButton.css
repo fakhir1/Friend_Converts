@@ -1,0 +1,35 @@
+.action-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 6px;
+  background: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-height: 50px;
+  gap: 10px;
+  width: 100%;
+}
+
+.action-button:hover {
+  background: #e9e9e9;
+}
+
+.action-icon {
+  /* margin-bottom: 8px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-label {
+  font-size: 11px;
+  font-weight: 500;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  text-align: start;
+  color: #606060;
+  /* line-height: 1.4; */
+}

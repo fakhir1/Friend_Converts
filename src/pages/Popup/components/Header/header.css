@@ -1,0 +1,82 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon-container {
+  background-color: #1e88e5; /* Blue color for the logo */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px; /* Slightly rounded corners */
+}
+
+.logo h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.menu-icon {
+  color: #555;
+  cursor: pointer;
+}
+.header-actions {
+  display: flex;
+  position: absolute;
+  background-color: white;
+  height: 420px;
+  width: 190px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  top: 0px;
+  right: 0px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+.slide-in {
+  transform: translateX(0);
+}
+
+.slide-out {
+  transform: translateX(100%);
+}
+.action-cancel {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  cursor: pointer;
+}
+.action-home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-height: 50px;
+  gap: 4px;
+}
+.action-options {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  /* padding: 20px; */
+  top: 40px;
+}

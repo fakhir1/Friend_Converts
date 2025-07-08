@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Upwork Job Propsal Ex",
-  "description": "This extension to generate job proposal for upwork",
+  "name": "Extension Boilerplate",
+  "description": "This extension to ",
   "background": { "service_worker": "background.bundle.js" },
   "action": {
     "default_popup": "popup.html",
