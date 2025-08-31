@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <a href="#">Become affiliate</a>
       </div>
       <p className="footer-disclaimer">
-        Friend Convert is not affiliated with Facebook in anyway
+        Do not close popup unless the process is complete.
       </p>
     </footer>
   );

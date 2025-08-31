@@ -1,6 +1,6 @@
 .popup-container {
-  width: 330px; /* Typical extension popup width */
-  height: 420px;
+  width: 360px; /* Typical extension popup width */
+  height: 470px;
   background-color: #faf8f6;
   display: flex;
   flex-direction: column;

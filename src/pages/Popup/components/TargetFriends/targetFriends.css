@@ -1,0 +1,152 @@
+.target-friends-container {
+  background: #fcf8f5;
+  padding: 0px 20px;
+  border-radius: 8px;
+  height: 330px;
+  /* max-width: 420px; */
+  /* margin: 0 auto; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.target-friends-title {
+  color: #444;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 28px;
+  text-align: left;
+  width: 100%;
+}
+
+.target-friends-input-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.target-friends-input-group {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+}
+
+.target-friends-label {
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.info-icon {
+  font-size: 15px;
+  color: #bdbdbd;
+  cursor: pointer;
+}
+
+.target-friends-input {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 24px;
+  padding: 4px 9px;
+  font-size: 14px;
+  background: #fff;
+  outline: none;
+  transition: border 0.2s;
+}
+.target-friends-input:focus {
+  border: 1.5px solid #8fd19e;
+}
+
+.target-friends-keywords-group {
+  width: 97%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.target-friends-keywords-input {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 24px;
+  padding: 8px 9px;
+  font-size: 12px;
+  background: #fff;
+  outline: none;
+  transition: border 0.2s;
+}
+.target-friends-keywords-input:focus {
+  border: 1.5px solid #8fd19e;
+}
+
+.target-friends-start-btn {
+  width: 120px;
+  height: 40px;
+  background: #00c26e;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.target-friends-start-btn:hover {
+  background: #00a95c;
+}
+
+.tag-input-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  background: #fff;
+  border-radius: 24px;
+  border: 1.5px solid #e0e0e0;
+  padding: 4px 9px;
+}
+.tag {
+  background: #e0f7e9;
+  color: #00b965;
+  border-radius: 12px;
+  padding: 2px 8px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.tag-remove {
+  background: none;
+  border: none;
+  color: #00b965;
+  margin-left: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Make the input grow to fill remaining space and ensure placeholder text fits */
+.target-friends-keywords-input {
+  flex: 1 1 auto;
+  min-width: 0; /* allow input to shrink inside flex container */
+  border: 1.5px solid #e0e0e0;
+  border-radius: 24px;
+  padding: 8px 12px;
+  font-size: 14px; /* larger placeholder text */
+  background: #fff;
+  outline: none;
+  transition: border 0.2s;
+}
+.target-friends-keywords-input:focus {
+  border: 1.5px solid #8fd19e;
+}
+
+/* Placeholder styling */
+.target-friends-keywords-input::placeholder {
+  font-size: 14px;
+  color: #999;
+}

@@ -1,0 +1,70 @@
+.cancel-pending-container {
+  background: #fcf8f5;
+  padding: 0px 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 330px;
+  justify-content: center;
+}
+
+.cancel-pending-title {
+  color: #444;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 28px;
+  text-align: left;
+  width: 100%;
+}
+
+.cancel-pending-start-btn {
+  width: 160px;
+  height: 40px;
+  background: #00c26e;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.cancel-pending-start-btn:hover {
+  background: #00a95c;
+}
+
+/* Target Friends button styling for consistency */
+.target-friends-start-btn {
+  width: 120px;
+  height: 40px;
+  background: #00c26e;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.target-friends-start-btn:hover {
+  background: #00a95c;
+}
+
+.target-friends-start-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cancel-status {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+}

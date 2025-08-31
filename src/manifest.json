@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Extension Boilerplate",
-  "description": "This extension to ",
+  "name": "Friend Convert",
+  "description": "Automate Facebook friend requests with license key authentication and more",
   "background": { "service_worker": "background.bundle.js" },
   "action": {
     "default_popup": "popup.html",
@@ -20,11 +20,15 @@
     }
   ],
   "permissions": ["storage", "tabs", "activeTab"],
-  "host_permissions": ["*://*.google.com/*", "*://*.youtube.com/*"],
+  "host_permissions": [
+    "*://*.google.com/*",
+    "*://*.youtube.com/*",
+    "*://*.facebook.com/*"
+  ],
   "web_accessible_resources": [
     {
       "resources": ["content.styles.css", "icon-128.png", "icon-34.png"],
-      "matches": []
+      "matches": ["<all_urls>"]
     }
   ]
 }
