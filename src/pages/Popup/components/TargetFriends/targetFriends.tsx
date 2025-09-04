@@ -8,7 +8,8 @@ declare global {
     sendFriendRequests?: (
       keywords: string[],
       maxRequests: number,
-      delayTime: number
+      delayTime: number,
+      useKeywordFilter?: boolean
     ) => Promise<void>;
   }
 }
@@ -196,7 +197,7 @@ function TargetFriends() {
 
     // Validate inputs and set error states
     const errors = {
-      keywords: keywords.length === 0,
+      keywords: false, // Allow empty keywords - will send requests to all users
       limit: limit === '',
       delay: delay === '',
     };
@@ -224,6 +225,7 @@ function TargetFriends() {
             keywords,
             maxRequests: limit === '' ? 0 : Number(limit),
             delayTime: delay === '' ? 0 : Number(delay),
+            useKeywordFilter: keywords.length > 0, // Flag to indicate keyword mode
           });
           chrome.tabs.onUpdated.removeListener(listener);
           setLoading(false);

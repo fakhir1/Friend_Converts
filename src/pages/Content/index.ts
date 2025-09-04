@@ -39,7 +39,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     sendFriendRequests(
       message.keywords,
       message.maxRequests,
-      message.delayTime
+      message.delayTime,
+      message.useKeywordFilter
     );
   }
   if (message.type === 'START_FRIENDS_DATA_COLLECTION') {

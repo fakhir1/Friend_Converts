@@ -52,7 +52,8 @@ export async function waitForAddFriendButtons(
 export async function sendFriendRequests(
   keywords: string[],
   maxRequests: number,
-  delayTime: number
+  delayTime: number,
+  useKeywordFilter: boolean = true // Default to true to preserve existing behavior
 ): Promise<void> {
   let sentCount = 0;
   const processedUsers = new Set<string>();
@@ -150,18 +151,35 @@ export async function sendFriendRequests(
         ...Array.from(card.querySelectorAll('span')),
         ...Array.from(card.querySelectorAll('div')),
       ];
-      const match = allTextNodes.find((el) => {
-        const text = el.innerText?.toLowerCase().trim();
-        if (!text) return false;
-        return keywords.some((keyword) => {
-          const words = keyword.toLowerCase().split(/\s+/);
-          return words.some((word) => word && text.includes(word));
+
+      let match: Element | undefined;
+      let shouldSendRequest = false;
+
+      if (useKeywordFilter && keywords.length > 0) {
+        // Original keyword matching logic
+        match = allTextNodes.find((el) => {
+          const text = el.innerText?.toLowerCase().trim();
+          if (!text) return false;
+          return keywords.some((keyword) => {
+            const words = keyword.toLowerCase().split(/\s+/);
+            return words.some((word) => word && text.includes(word));
+          });
         });
-      });
-      if (match) {
+        shouldSendRequest = !!match;
+      } else {
+        // No keyword filter - send requests to all users
+        shouldSendRequest = true;
+        match = allTextNodes[0] || card; // Use first element for display purposes
+      }
+
+      if (shouldSendRequest) {
+        const statusMessage = useKeywordFilter && keywords.length > 0
+          ? `Keyword match "${(match as HTMLElement)?.innerText || 'found'}" → Preparing to send request.`
+          : `No keyword filter → Preparing to send request.`;
+
         (window as any).updateFriendProgress &&
           (window as any).updateFriendProgress({
-            status: `Keyword match "${match.innerText}" → Preparing to send request.`,
+            status: statusMessage,
             sent: sentCount,
           });
         btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -188,9 +206,10 @@ export async function sendFriendRequests(
                     sentCount++;
                   }
                   processedUsers.add(userIdentifier);
+                  const displayText = match ? (match as HTMLElement).innerText || 'user' : 'user';
                   (window as any).updateFriendProgress &&
                     (window as any).updateFriendProgress({
-                      status: `Friend request sent to: ${match.innerText}. Total sent: ${sentCount}`,
+                      status: `Friend request sent to: ${displayText}. Total sent: ${sentCount}`,
                       sent: sentCount,
                     });
                 } catch (clickError) {
